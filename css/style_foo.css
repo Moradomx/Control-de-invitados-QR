@@ -1,0 +1,136 @@
+* { box-sizing: border-box; }
+
+.header {
+    background-color: #ccc;
+    color: white;
+    font-size: 1.5em;
+    padding: 1rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+img {
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+}
+
+.table-users {
+    border: 1px solid #ccc;
+    max-width: calc(100% - 2em);
+    margin: 5em auto;
+    width: 800px;
+}
+
+table { width: 100%; }
+
+td, th { padding: 10px; }
+
+td {
+    background-color:white  !important;
+    text-align: center;
+    vertical-align: middle;
+	color: black;
+}
+td:last-child {
+    font-size: 0.95em;
+    line-height: 1.4;
+    text-align: left;
+}
+
+th { background-color: black; text-align:center; }
+
+tr:nth-child(2n) { background-color: #fafafa; }
+tr:nth-child(2n+1) { background-color: #fafafa; }
+
+
+@media screen and (max-width: 700px) {
+    table, tr, td { display: block; }
+    
+    td:first-child {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100px;
+		 text-align:center;
+    }
+    td:not(:first-child) {
+        clear: both;
+        margin-left: 100px;
+        padding: 4px 20px 4px 100px;
+        position: relative;
+        text-align: left;
+    }
+    td:not(:first-child):before {
+        color: #bbb;
+        content: '';
+        display: ;
+        left: 0;
+        position: absolute;
+    }
+    td:nth-child(2):before { content: 'Telefono: '; }
+    td:nth-child(3):before { content: 'Email: '; }
+    td:nth-child(4):before { content: 'pregunta:  '; }
+    td:nth-child(5):before { content: 'Personas:'; }
+    td:nth-child(6):before { content: 'Asistieron: '; }
+    td:nth-child(7):before { content: 'Llegada: '; }
+    td:nth-child(8):before { content: 'Asistio: '; }
+    td:nth-child(9):before { content: 'Registro: '; }
+    td:nth-child(10):before { content: 'Mostrar: '; }
+    
+    tr { 
+        padding: 10px 0; 
+        position: relative; 
+    }
+    tr:first-child { display: none; }
+}
+
+@media screen and (max-width: 700px) {
+
+    img {
+        height: 100px;
+        margin: 0.5rem 0;
+        width: 100px;
+    }
+    
+    td:first-child,
+    td:not(:first-child) {
+        background-color: black;
+        padding: 5px 1em;
+        width: 100%;
+    }
+    
+    td:first-child {
+        background-color: black;
+        border-bottom: 1px solid #ddd;
+        position: relative;
+        top: 0;
+        transform: translateY(0);
+    }
+    
+    td:not(:first-child) { 
+		background-color:white  !important;
+        margin: 0; 
+		color:black;
+    }
+    td:not(:first-child):before {
+        display: block;
+        font-size: .8em;
+        padding-top: 0.3em;
+        position: relative;
+    }
+    
+    td:last-child { padding-bottom: 1rem; }
+    
+    tr {
+        background-color: blue !important;
+        border: 1px solid #ccc;
+        margin: 0.5rem 0;
+        padding: 0;
+    }
+    
+    .table-users {
+        border: none;
+        box-shadow: none;
+    }
+}
